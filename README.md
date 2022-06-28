@@ -6,12 +6,10 @@ SVCdb is designed to support multi-country, multi-manufacture, multi-device oper
 Both backup and restore plans are simplified. Backup locations need to be adjusted in order to have securely stored backups.
 
 **Data sources for sample data**
-1. customers - all the test data used in database are randomly generated data. No real/existing data was used as source.
-2. employees - all the test data used in database are randomly generated data. No real/existing data was used as source.
-3. addresses  - all the test data used in database are randomly generated data. No real/existing data was used as source.
-4. phone numbers - all the test data used in database are randomly generated data to match numbering standard. No real/existing data was used as source. 
-5. models - publicly available data used
-6. IMEI numbers and serial numbers - randomly generated data to match numbering standard.
+1. customers, employees - all the test data used in database are randomly generated data to match numbering standard. No real/existing data was used as source.
+2. addresses, email addresses, phone numbers - all the test data used in database are randomly generated data. No real/existing data was used as source.
+3. models - publicly available data used
+4. IMEI numbers and serial numbers - randomly generated data to match numbering standard.
 
 **General description of Service process** 
 1. customer brings device to service center for repair:
