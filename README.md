@@ -30,9 +30,9 @@ Test data installation is done via data.sql script.
 Both scripts need to be run via suitable environment as described bellow.
 
 _Prerequisites_
-	- MS SQL server Enterprise or Developer edition, min 2019 version,
-	- SQL server management studio, min version 18.x.x or Azure Data Studio 1.36.x,
-	- 10MB free space 
+1) MS SQL server Enterprise or Developer edition, min 2019 version,
+2) SQL server management studio, min version 18.x.x or Azure Data Studio 1.36.x,
+3) 10MB free space 
 
 
 **Backup/restore strategy**
