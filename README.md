@@ -51,5 +51,6 @@ In case a user error (accidental `DELETE`) the plan is to restore data from the 
 Notice: Both backup and restore plans are simplified. Backup locations need to be adjusted based on availabilitz in order to have securely stored backups.
 
 **Full documentation**
+
 Full documentation is available [here](SVCdb_documentation_en.pdf).
 
