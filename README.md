@@ -3,6 +3,7 @@ Purpose of SVCdb database is to store data necessary for service center operatio
 
 **Simplification**
 SVCdb is designed to support multi-country, multi-manufacture, multi-device operations but sample data used cover only hungarian customers, two manufacturers and mobile phones and tablets. With modifications, database accepts data in format for other countries, etc. 
+Both backup and restore plans are simplified. Backup locations need to be adjusted in order to have securely stored backups.
 
 **Data sources for sample data**
 1. customers - all the test data used in database are randomly generated data. No real/existing data was used as source.
@@ -47,8 +48,6 @@ Transaction log backups are taken every day in 4hour intervals (Monday-Sunday at
 	
 _Restore plan_
 In case a user error (accidental `DELETE`) the plan is to restore data from the last available transaction log backup. In case of catastrophic failure, data restoration is made from the full backup.
-
-Notice: Both backup and restore plans are simplified. Backup locations need to be adjusted based on availabilitz in order to have securely stored backups.
 
 **Full documentation**
 
