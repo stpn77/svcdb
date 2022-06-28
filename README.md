@@ -21,9 +21,11 @@ When device handled by initial administration, it is assigned to service employe
 3. customer picks up device from service center after repair.
 
 **Database diagram**
+
 ![diagram.png](diagram.png)
 
 **Installation**
+
 Database installation is done via schema.sql script is optimized for Windows systems.
 Test data installation is done via data.sql script.
 Both scripts need to be run via suitable environment as described bellow.
