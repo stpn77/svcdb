@@ -44,3 +44,17 @@ _Restore plan_
 In case a user error (accidental `DELETE`) the plan is to restore data from the last available transaction log backup. In case of catastrophic failure, data restoration is made from the full backup.
 
 Notice: Both backup and restore plans are simplified. Backup locations need to be adjusted based on availabilitz in order to have securely stored backups.
+
+**Schema: dbo**
+Base schema dbo is used. No additional schema is used because of the size of the database itself. 
+
+**Tables**
+_dbo.countries_
+Name	Data type	Nullable	Default	Description	Check
+country_id	int	NOT NULL	 	PK Country ID	PK
+ctr_abb	char(2)	NOT NULL	 	ISO short name	UNIQUE
+[A-Z][A-Z]
+ctr_name	varchar(50)	NOT NULL	 	Full name	
+active	bit	NOT NULL	 	Currently used Active/Inactive	
+![image](https://user-images.githubusercontent.com/92166098/176174902-492ab23b-cb91-4668-8a7f-de8c48875841.png)
+
