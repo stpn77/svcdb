@@ -16,11 +16,12 @@ SVCdb is designed to support multi-country, multi-manufacture, multi-device oper
 1. customer brings device to service center for repair:
 Customer's personal data need to be registered together with the device given for repair. Device is accepted for repair if matching the directory manufacturer/model data, warranty repair and out of warranty repair is shown matching the base criteria. 
 2. repair process
-When device handled by initial administration, it is assigned to service employee who is authorized to handle repair after completed training and exam for particular model. Standard repair process follows this flow: incoming administration - test for symptom - repair of device - test for functionality - outgoing administration.
+When device handled by initial administration, it is assigned to service employee who is authorized to handle repair after completed training and exam for particular model. Standard repair process follows this flow: 
+	incoming administration - test for symptom - repair of device - test for functionality - outgoing administration.
 3. customer picks up device from service center after repair.
 
 **Database diagram**
-[diagram.png]
+![diagram.png](diagram.png)
 
 **Installation**
 Database installation is done via schema.sql script is optimized for Windows systems.
@@ -48,5 +49,5 @@ In case a user error (accidental `DELETE`) the plan is to restore data from the 
 Notice: Both backup and restore plans are simplified. Backup locations need to be adjusted based on availabilitz in order to have securely stored backups.
 
 **Full documentation**
-Full documentation is available [here](https://github.com/stpn77/svcdb/SVCdb_documentation_en.pdf).
+Full documentation is available [here](SVCdb_documentation_en.pdf).
 
