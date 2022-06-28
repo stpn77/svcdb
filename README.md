@@ -9,9 +9,8 @@ SVCdb is designed to support multi-country, multi-manufacture, multi-device oper
 2. employees - all the test data used in database are randomly generated data. No real/existing data was used as source.
 3. addresses  - all the test data used in database are randomly generated data. No real/existing data was used as source.
 4. phone numbers - all the test data used in database are randomly generated data to match numbering standard. No real/existing data was used as source. 
-5. models - publicly published data used
+5. models - publicly available data used
 6. IMEI numbers and serial numbers - randomly generated data to match numbering standard.
-
 
 **General description of Service process** 
 1. customer brings device to service center for repair:
@@ -19,6 +18,9 @@ Customer's personal data need to be registered together with the device given fo
 2. repair process
 When device handled by initial administration, it is assigned to service employee who is authorized to handle repair after completed training and exam for particular model. Standard repair process follows this flow: incoming administration - test for symptom - repair of device - test for functionality - outgoing administration.
 3. customer picks up device from service center after repair.
+
+**Database diagram**
+[diagram.png]
 
 **Installation**
 Database installation is done via schema.sql script is optimized for Windows systems.
@@ -45,16 +47,6 @@ In case a user error (accidental `DELETE`) the plan is to restore data from the 
 
 Notice: Both backup and restore plans are simplified. Backup locations need to be adjusted based on availabilitz in order to have securely stored backups.
 
-**Schema: dbo**
-Base schema dbo is used. No additional schema is used because of the size of the database itself. 
-
-**Tables**
-_dbo.countries_
-Name	Data type	Nullable	Default	Description	Check
-country_id	int	NOT NULL	 	PK Country ID	PK
-ctr_abb	char(2)	NOT NULL	 	ISO short name	UNIQUE
-[A-Z][A-Z]
-ctr_name	varchar(50)	NOT NULL	 	Full name	
-active	bit	NOT NULL	 	Currently used Active/Inactive	
-![image](https://user-images.githubusercontent.com/92166098/176174902-492ab23b-cb91-4668-8a7f-de8c48875841.png)
+**Full documentation**
+Full documentation is available [here](https://github.com/stpn77/svcdb/SVCdb_documentation_en.pdf).
 
