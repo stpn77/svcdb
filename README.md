@@ -31,9 +31,19 @@ Test data installation is done via data.sql script.
 Both scripts need to be run via suitable environment as described bellow.
 
 _Prerequisites_
-1) MS SQL server Enterprise or Developer edition, min 2019 version,
-2) SQL server management studio, min version 18.x.x or Azure Data Studio 1.36.x,
+
+_For Windows systems_
+1) [MS SQL server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) Enterprise or Developer edition, min 2019 version,
+2) [SQL server management studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16), min version 18.x.x or Azure Data Studio 1.36.x,
 3) 10MB free space 
+4) [schema.sql](schema.sql) and [data.sql](data.sql) run to re-create database and fill with sample data.
+
+_For MacOS systems running on M1 chip_
+1) [Docker](https://docs.docker.com/desktop/install/mac-install/)
+2) Official azure-sql-edge docker image from Microsoft: `sudo docker pull mcr.microsoft.com/azure-sql-edge:latest`
+3) Run downloaded docker image: `sudo docker run --cap-add SYS_PTRACE -e 'ACCEPT_EULA=1' -e 'MSSQL_SA_PASSWORD=YourP@s7w0rd' -p 1433:1433 --name sqledge -d mcr.microsoft.com/azure-sql-edge`
+4) [Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver16)
+5) [schema.sql](schema-azure.sql) and [data.sql](data.sql) run to re-create database and fill with sample data.
 
 
 **Backup/restore strategy**
@@ -51,4 +61,8 @@ In case a user error (accidental `DELETE`) the plan is to restore data from the 
 **Full documentation**
 
 Full documentation is available [here](SVCdb_documentation_en.pdf).
+
+
+
+
 
