@@ -34,16 +34,16 @@ _Prerequisites_
 
 _For Windows systems_
 1) [MS SQL server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) Enterprise or Developer edition, min 2019 version,
-2) [SQL server management studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16), min version 18.x.x or Azure Data Studio 1.36.x,
-3) 10MB free space 
-4) [schema.sql](schema.sql) and [data.sql](data.sql) run to re-create database and fill with sample data.
+2) Run [SQL server management studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16), min version 18.x.x or Azure Data Studio
+3) Check for at least 10MB free space.
+4) Run [schema.sql](schema.sql) and [data.sql](data.sql) to re-create database and fill with sample data.
 
 _For MacOS systems running on M1 chip_
 1) [Docker](https://docs.docker.com/desktop/install/mac-install/)
 2) Official azure-sql-edge docker image from Microsoft: `sudo docker pull mcr.microsoft.com/azure-sql-edge:latest`
 3) Run downloaded docker image: `sudo docker run --cap-add SYS_PTRACE -e 'ACCEPT_EULA=1' -e 'MSSQL_SA_PASSWORD=YourP@s7w0rd' -p 1433:1433 --name sqledge -d mcr.microsoft.com/azure-sql-edge`
-4) [Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver16)
-5) [schema-azure.sql](schema-azure.sql) and [data.sql](data.sql) run to re-create database and fill with sample data.
+4) Run [Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver16) and connect to Azure SQL on localhost using port 1433.
+5) Run [schema-azure.sql](schema-azure.sql) and [data.sql](data.sql) to re-create database and fill with sample data.
 
 
 **Backup/restore strategy**
@@ -57,6 +57,10 @@ Transaction log backups are taken every day in 4hour intervals (Monday-Sunday at
 	
 _Restore plan_
 In case a user error (accidental `DELETE`) the plan is to restore data from the last available transaction log backup. In case of catastrophic failure, data restoration is made from the full backup.
+
+**Notes**
+1) Change provided default passwords in sql scripts and docker run command to keep access limited to authorized user/s.
+2) Database created in Docker environment is not persisted, neither backups.
 
 **Full documentation**
 
