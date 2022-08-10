@@ -1,3 +1,5 @@
+-- This script populates sample data to SVCdb database.
+
 USE [SVCdb]
 GO
 SET IDENTITY_INSERT [dbo].[countries] ON 

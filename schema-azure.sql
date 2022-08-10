@@ -1,3 +1,6 @@
+-- This script is used to re-create database in Azure SQL environment
+-- All passwords in script are for demonstration only, change them before script run.
+
 USE [master]
 GO
 
