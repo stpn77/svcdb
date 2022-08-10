@@ -43,7 +43,7 @@ _For MacOS systems running on M1 chip_
 2) Official azure-sql-edge docker image from Microsoft: `sudo docker pull mcr.microsoft.com/azure-sql-edge:latest`
 3) Run downloaded docker image: `sudo docker run --cap-add SYS_PTRACE -e 'ACCEPT_EULA=1' -e 'MSSQL_SA_PASSWORD=YourP@s7w0rd' -p 1433:1433 --name sqledge -d mcr.microsoft.com/azure-sql-edge`
 4) [Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver16)
-5) [schema.sql](schema-azure.sql) and [data.sql](data.sql) run to re-create database and fill with sample data.
+5) [schema-azure.sql](schema-azure.sql) and [data.sql](data.sql) run to re-create database and fill with sample data.
 
 
 **Backup/restore strategy**
