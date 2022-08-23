@@ -46,7 +46,7 @@ _For MacOS systems running on M1 chip_
 5) Run [schema-azure.sql](schema-azure.sql) and [data.sql](data.sql) to re-create database and fill with sample data.
 
 
-**Backup/restore strategy**
+**Backup/restore strategy (Windows version only)**
 
 _Backup plan_
 To maintain integrity a security of database, full recovery mode is in place. Regular backup routine is set with one full backup done daily and transaction logs backup on 4hours schedule.
