@@ -64,7 +64,8 @@ In case a user error (accidental `DELETE`) the plan is to restore data from the 
 
 **Full documentation**
 
-Full documentation is available [here](SVCdb_documentation_en.pdf).
+Full documentation on database sctructure, data and installation under Windows is available [here](SVCdb_documentation_en.pdf).
+Non-Windows solution is excluded from documentation.
 
 
 
