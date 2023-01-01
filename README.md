@@ -26,8 +26,10 @@ When device handled by initial administration, it is assigned to service employe
 
 **Installation**
 
-Database installation is done via schema.sql script is optimized for Windows systems.
-Test data installation is done via data.sql script.
+Database installation in Windows based systems is done via schema.sql script, test data installation is done via data.sql script.
+Both scripts need to be run via suitable environment as described bellow.
+
+Database installation on MacOS is done via schema-azure.sql script, test data installation is done via data.sql script.
 Both scripts need to be run via suitable environment as described bellow.
 
 _Prerequisites_
